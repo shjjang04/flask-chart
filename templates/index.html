@@ -1,0 +1,47 @@
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<canvas id="myChart" width="100" height="100"></canvas>
+<script>
+var ctx = document.getElementById('myChart').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: {{lab|safe}},
+        datasets: [{
+            data: {{tilt01}},
+            label: '# tilt-01',
+            borderColor: 'Red'
+        }, {
+            data: {{tilt02}},
+            label: '# tilt-02',
+            borderColor: 'Blue'
+        }, {
+            data: {{tilt03}},
+            label: '# tilt-03',
+            borderColor: 'Green'
+        }, {
+            data: {{tilt04}},
+            label: '# tilt-04',
+            borderColor: 'Purple'
+        }, {
+            data: {{tilt05}},
+            label: '# tilt-05',
+            borderColor: 'Orange'
+        }, {
+            data: {{tilt06}},
+            label: '# tilt-06',
+            borderColor: 'rgba(255, 0, 0, 0.5)'
+        }, {
+            data: {{tilt07}},
+            label: '# tilt-07',
+            borderColor: 'Yellow'
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+</script>
